@@ -1,6 +1,6 @@
 Name:           ocaml-rtime
-Version:        0.9.0
-Release:        %mkrel 2
+Version:        0.9.1
+Release:        %mkrel 1
 Summary:        OCaml module implementing timelines for ocaml-react
 License:        new BSD
 Group:          Development/Other
@@ -28,6 +28,7 @@ developing applications that use %{name}.
 %setup -q -n rtime-%{version}
 
 %build
+chmod u+x build
 ./build module-byte
 ./build module-native
 #./build module-plugin
