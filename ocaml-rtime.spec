@@ -1,12 +1,12 @@
 Name:           ocaml-rtime
 Version:        0.9.1
-Release:        %mkrel 1
+Release:        2
 Summary:        OCaml module implementing timelines for ocaml-react
 License:        new BSD
 Group:          Development/Other
 URL:            http://erratique.ch/software/rtime
 Source0:        http://erratique.ch/software/rtime/releases/rtime-%{version}.tbz
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
+BuildRequires:  ocaml
 BuildRequires:  ocaml-react-devel
 
 %description
@@ -34,7 +34,6 @@ chmod u+x build
 #./build module-plugin
 
 %install
-rm -rf %{buildroot}
 INSTALLDIR=%{buildroot}/%{_libdir}/ocaml/rtime ./build install
 INSTALLDIR=%{buildroot}/%{_libdir}/ocaml/rtime ./build install-byte
 #INSTALLDIR=%{buildroot}/%{_libdir}/ocaml/rtime ./build install-plugin
@@ -43,9 +42,6 @@ INSTALLDIR=%{buildroot}/%{_libdir}/ocaml/rtime ./build install-byte
 #%check
 #INSTALLDIR=%{buildroot}/%{_libdir}/ocaml/rtime ./build test.native
 #./test.native -p 0.02
-
-%clean
-rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
@@ -63,4 +59,17 @@ rm -rf %{buildroot}
 %{_libdir}/ocaml/rtime/rtime.cmx
 %{_libdir}/ocaml/rtime/rtime.o
 #%{_libdir}/ocaml/rtime/rtime.cmxs
+
+
+
+%changelog
+* Thu Apr 22 2010 Florent Monnier <blue_prawn@mandriva.org> 0.9.1-1mdv2010.1
++ Revision: 538010
+- updated to version 0.9.1
+
+* Thu Aug 13 2009 Florent Monnier <blue_prawn@mandriva.org> 0.9.0-2mdv2010.0
++ Revision: 415833
+- the tests may fail in a heavily loaded environment
+- precision set
+- import ocaml-rtime
 
