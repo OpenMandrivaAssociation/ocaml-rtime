@@ -4,7 +4,7 @@
 Summary:	OCaml module implementing timelines for ocaml-react
 Name:		ocaml-rtime
 Version:	0.9.3
-Release:	1
+Release:	2
 License:	BSD
 Group:		Development/Other
 Url:		http://erratique.ch/software/rtime
