@@ -7,7 +7,7 @@ Version:	0.9.3
 Release:	2
 License:	BSD
 Group:		Development/Other
-Url:		http://erratique.ch/software/rtime
+Url:		https://erratique.ch/software/rtime
 Source0:	http://erratique.ch/software/rtime/releases/rtime-%{version}.tbz
 BuildRequires:	ocaml
 BuildRequires:	ocaml-findlib
